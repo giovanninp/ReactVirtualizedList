@@ -1,0 +1,20 @@
+@keyframes in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  animation: in;
+  animation-duration: 1s;
+  background-color: #c8c8c8;
+}
