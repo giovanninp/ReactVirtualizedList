@@ -6,7 +6,8 @@ function List({
   itemSize,
   height,
   width,
-  renderItem: RenderItem = () => null
+  renderItem: RenderItem = () => null,
+  keyExtractor = (index) => `${index}`
 }) {
   const listRef = useRef();
   const [fromTop, setFromTop] = useState(0);
@@ -39,6 +40,7 @@ function List({
         <div
           style={{ height: `${itemSize}px`, width: `${width}px` }}
           className={styles.item}
+          key={keyExtractor(index)}
         >
           {shouldRender(index) && <RenderItem index={index} />}
         </div>
